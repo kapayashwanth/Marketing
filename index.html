@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Siri Enterprises - Your Vision Our Mission</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+
+        .container {
+            max-width: 900px;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 min-h-screen flex items-center justify-center py-10">
+
+    <div class="container bg-white shadow-xl rounded-lg overflow-hidden md:flex">
+
+        <!-- Left Sidebar (QR Code & Basic Info) -->
+        <div
+            class="md:w-1/3 bg-white p-8 flex flex-col items-center justify-center text-center border-r border-gray-200">
+            <h1 class="text-4xl font-bold text-red-800 mb-2">
+                Mrs. Krishna
+            </h1>
+            <p class="text-gray-600 mb-6">
+                Owner, Sri Siri Enterprises
+            </p>
+            <div class="w-48 h-48 bg-gray-200 rounded-lg p-2 mb-6">
+                <!-- IMPORTANT: To show your QR code, save your QR code image as 'qr_code.png' in the same folder as this file. -->
+                <p class="text-sm text-gray-500 mt-2">QR Code Goes Here</p>
+                <img src="qr_code.png" alt="QR Code" class="w-full h-full object-cover rounded-lg">
+            </div>
+
+            <a href="https://srisirienterprices.com" target="_blank" class="text-sm text-blue-600 hover:underline mb-2">
+                srisirienterprices.com
+            </a>
+            <div class="flex items-center text-gray-600 mb-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                </svg>
+                srisirienterprices@gmail.com
+            </div>
+            <div class="flex items-center text-gray-600 mb-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                    <path
+                        d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.774a11.087 11.087 0 006.103 6.103l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                </svg>
+                +91 78424 78999
+            </div>
+            <div class="flex items-center text-gray-600">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                        clip-rule="evenodd" />
+                </svg>
+                Pl.no. 91/2, SV. Nagar, Nagaram, Hyderabad
+            </div>
+        </div>
+
+        <!-- Right Content Area -->
+        <div class="md:w-2/3 p-8 flex flex-col">
+            <!-- Company Logo & Slogan -->
+            <div class="flex flex-col items-center mb-8">
+                <!-- Logo perfectly centered, no outer box -->
+                <img src="logo.png" alt="Sri Siri Enterprises Logo" class="h-40 w-40 object-contain object-center mb-4"
+                    style="background:transparent;box-shadow:none;padding:0;">
+                <h2 class="text-3xl font-semibold text-red-800">
+                    SRI SIRI ENTERPRISES
+                </h2>
+                <p class="text-gray-500 italic mt-1">
+                    your vision our mission
+                </p>
+            </div>
+
+            <!-- Tab Navigation -->
+            <div class="flex justify-around mb-8 border-b border-gray-300">
+                <button onclick="showTab('about')"
+                    class="py-2 px-4 text-center text-lg font-medium text-gray-700 border-b-2 border-transparent hover:border-red-800 focus:outline-none transition-all duration-300">About
+                    Us</button>
+                <button onclick="showTab('printing')"
+                    class="py-2 px-4 text-center text-lg font-medium text-gray-700 border-b-2 border-transparent hover:border-red-800 focus:outline-none transition-all duration-300">Printing</button>
+                <button onclick="showTab('boards')"
+                    class="py-2 px-4 text-center text-lg font-medium text-gray-700 border-b-2 border-transparent hover:border-red-800 focus:outline-none transition-all duration-300">Boards</button>
+            </div>
+
+            <!-- Tab Content -->
+            <div id="about" class="tab-content active p-4">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">About Our Company</h3>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                    Welcome to Sri Siri Enterprises, your one-stop solution for all your printing and advertising needs.
+                    We are dedicated to delivering high-quality products and services that help bring your vision to
+                    life.
+                </p>
+                <p class="text-gray-600 leading-relaxed">
+                    With a focus on precision and customer satisfaction, we offer a wide range of services from
+                    professional printing to custom-made boards. Let us help you make a lasting impression.
+                </p>
+            </div>
+
+            <div id="printing" class="tab-content p-4">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Our Printing Services</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <button onclick="showGallery('printing', 'letter_head')"
+                        class="bg-red-50 hover:bg-red-100 p-4 rounded-lg shadow-md text-center font-medium transition-all duration-300">Letter
+                        Heads / Visiting Cards</button>
+                    <button onclick="showGallery('printing', 'box_printing')"
+                        class="bg-red-50 hover:bg-red-100 p-4 rounded-lg shadow-md text-center font-medium transition-all duration-300">Box
+                        Printing</button>
+                    <button onclick="showGallery('printing', 'gift_printing')"
+                        class="bg-red-50 hover:bg-red-100 p-4 rounded-lg shadow-md text-center font-medium transition-all duration-300">Gift
+                        Printing</button>
+                    <button onclick="showGallery('printing', 'stamps')"
+                        class="bg-red-50 hover:bg-red-100 p-4 rounded-lg shadow-md text-center font-medium transition-all duration-300">Stamps
+                        / Diaries / Calendar</button>
+                    <button onclick="showGallery('printing', 'billbooks')"
+                        class="bg-red-50 hover:bg-red-100 p-4 rounded-lg shadow-md text-center font-medium transition-all duration-300">Bill
+                        Books / Register</button>
+                    <button onclick="showGallery('printing', 'stickers')"
+                        class="bg-red-50 hover:bg-red-100 p-4 rounded-lg shadow-md text-center font-medium transition-all duration-300">Sticker
+                        / Donglers</button>
+                    <button onclick="showGallery('printing', 'leaflets')"
+                        class="bg-red-50 hover:bg-red-100 p-4 rounded-lg shadow-md text-center font-medium transition-all duration-300">Leaflets
+                        / Brochures</button>
+                    <button onclick="showGallery('printing', 'all_printing')"
+                        class="bg-red-50 hover:bg-red-100 p-4 rounded-lg shadow-md text-center font-medium transition-all duration-300">All
+                        Kinds of Printable</button>
+                </div>
+            </div>
+
+            <div id="boards" class="tab-content p-4">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Our Boards & Signage</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <button onclick="showGallery('boards', 'safety_boards')"
+                        class="bg-red-50 hover:bg-red-100 p-4 rounded-lg shadow-md text-center font-medium transition-all duration-300">Safety
+                        Boards</button>
+                    <button onclick="showGallery('boards', 'flex_boards')"
+                        class="bg-red-50 hover:bg-red-100 p-4 rounded-lg shadow-md text-center font-medium transition-all duration-300">Flex
+                        Boards</button>
+                    <button onclick="showGallery('boards', 'neon')"
+                        class="bg-red-50 hover:bg-red-100 p-4 rounded-lg shadow-md text-center font-medium transition-all duration-300">Neon</button>
+                    <button onclick="showGallery('boards', 'main_lighting')"
+                        class="bg-red-50 hover:bg-red-100 p-4 rounded-lg shadow-md text-center font-medium transition-all duration-300">Main
+                        Lighting Boards</button>
+                    <button onclick="showGallery('boards', 'ss_boards')"
+                        class="bg-red-50 hover:bg-red-100 p-4 rounded-lg shadow-md text-center font-medium transition-all duration-300">SS
+                        Boards</button>
+                    <button onclick="showGallery('boards', 'lighting_gifts')"
+                        class="bg-red-50 hover:bg-red-100 p-4 rounded-lg shadow-md text-center font-medium transition-all duration-300">Lighting
+                        Gifts</button>
+                    <button onclick="showGallery('boards', 'all_boards')"
+                        class="bg-red-50 hover:bg-red-100 p-4 rounded-lg shadow-md text-center font-medium transition-all duration-300">All
+                        Kinds of Lighting Boards</button>
+                </div>
+            </div>
+
+            <!-- Gallery Modal -->
+            <div id="galleryModal"
+                class="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center hidden z-50">
+                <div class="bg-white p-6 rounded-lg shadow-xl max-w-2xl w-full relative">
+                    <button onclick="closeModal()"
+                        class="absolute top-2 right-2 text-gray-500 hover:text-gray-800 focus:outline-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                    <h4 id="galleryTitle" class="text-2xl font-semibold mb-4 text-gray-800"></h4>
+                    <div id="galleryImages" class="grid grid-cols-1 sm:grid-cols-2 gap-6 overflow-y-auto max-h-[80vh]">
+                        <!-- Images will be injected here by JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+
+        const galleries = {
+            printing: {
+                letter_head: {
+                    title: "Letter Heads / Visiting Cards Gallery",
+                    images: [
+                        { url: "letterheads.jpg", alt: "Letter Head 1" },
+                        { url: "lettergeads 2.jpg", alt: "Letter Head 2" },
+                        { url: "lettergeads3.jpg", alt: "Visiting Card 1" }
+                    ]
+                },
+                box_printing: {
+                    title: "Box Printing Gallery",
+                    images: [
+                        { url: "boxprinting.jpg", alt: "Box Printing 1" },
+                        { url: "boxprinting1.jpg", alt: "Box Printing 2" },
+                    ]
+                },
+                gift_printing: {
+                    title: "Gift Printing Gallery",
+                    images: [
+                        { url: "gift1.jpg", alt: "Gift Printing 1" },
+                        { url: "gift2.jpg", alt: "Gift Printing 2" },
+                    ]
+                },
+                stamps: {
+                    title: "Stamps / Diaries / Calendar Gallery",
+                    images: [
+                        { url: "calenders1.jpg", alt: "Calendar 1" },
+                        { url: "calenders2.jpg", alt: "Calendar 2" },
+                        { url: "calenders3.jpg", alt: "Calendar 3" }
+                    ]
+                },
+                billbooks: {
+                    title: "Bill Books / Register Gallery",
+                    images: [
+                        { url: "bilbooks.jpg", alt: "Bill Books" },
+                        { url: "billbooks2.jpg", alt: "Register" },
+                    ]
+                },
+                stickers: {
+                    title: "Sticker / Donglers Gallery",
+                    images: [
+                        { url: "stickers.jpg", alt: "Stickers" },
+                        { url: "stickers2.jpg", alt: "Donglers" },
+                    ]
+                },
+                leaflets: {
+                    title: "Leaflets / Brochures Gallery",
+                    images: [
+                        { url: "leaflet.jpg", alt: "Leaflets" },
+                    ]
+                },
+                all_printing: {
+                    title: "All Kinds of Printable Gallery",
+                    images: [
+                        { url: "printables.jpg", alt: "Printing Sample 1" },
+                        { url: "printables1.jpg", alt: "Printing Sample 2" },
+                    ]
+                }
+            },
+            boards: {
+                safety_boards: {
+                    title: "Safety Boards Gallery",
+                    images: [
+                        { url: "saftey_boards_1.jpg", alt: "Safety Board 1" },
+                        { url: "daftey_boards_2.jpg", alt: "Safety Board 2" },
+                    ]
+                },
+                flex_boards: {
+                    title: "Flex Boards Gallery",
+                    images: [
+                        { url: "flexboards1.jpg", alt: "Flex Board 1" },
+                        { url: "flexboards2.jpg", alt: "Flex Board 2" },
+                    ]
+                },
+                neon: {
+                    title: "Neon Signs Gallery",
+                    images: [
+                        { url: "neon 1.jpg", alt: "Neon Sign 1" },
+                        { url: "neon2.jpg", alt: "Neon Sign 2" },
+                    ]
+                },
+                main_lighting: {
+                    title: "Main Lighting Boards Gallery",
+                    images: [
+                        { url: "main_lighting_board_1.jpg", alt: "Lighting Board 1" },
+                        { url: "main_lighting_board_2.jpg", alt: "Lighting Board 2" },
+                    ]
+                },
+                ss_boards: {
+                    title: "SS Boards Gallery",
+                    images: [
+                        { url: "ss_boards_1.jpg", alt: "SS Board 1" },
+                        { url: "ss_boards_2.jpg", alt: "SS Board 2" },
+                    ]
+                },
+                lighting_gifts: {
+                    title: "Lighting Gifts Gallery",
+                    images: [
+                        { url: "lighting_gifts_1.jpg", alt: "Lighting Gift 1" },
+                        { url: "lighting_gifts_2.jpg", alt: "Lighting Gift 2" },
+                    ]
+                },
+                all_boards: {
+                    title: "All Kinds of Lighting Boards Gallery",
+                    images: [
+                        { url: "lighting_boards_1.jpg", alt: "Board Sample 1" },
+                        { url: "lighting_boards_2.jpg", alt: "Board Sample 2" },
+                    ]
+                }
+            }
+        };
+
+        function showTab(tabId) {
+            // Hide all tab contents
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            // Show the selected tab content
+            document.getElementById(tabId).classList.add('active');
+        }
+
+        function showGallery(serviceType, galleryId) {
+            const gallery = galleries[serviceType][galleryId];
+            if (!gallery) return; // Exit if gallery doesn't exist
+
+            const galleryTitle = document.getElementById('galleryTitle');
+            const galleryImagesContainer = document.getElementById('galleryImages');
+            const galleryModal = document.getElementById('galleryModal');
+
+            galleryTitle.textContent = gallery.title;
+            galleryImagesContainer.innerHTML = ''; // Clear previous images
+
+            gallery.images.forEach(image => {
+                const imgElement = document.createElement('img');
+                imgElement.src = image.url;
+                imgElement.alt = image.alt;
+                imgElement.className = 'w-full h-[340px] object-cover rounded-lg shadow-md';
+                imgElement.onerror = () => {
+                    imgElement.src = "https://placehold.co/400x300/e5e7eb/4b5563?text=Image+Not+Found";
+                };
+                galleryImagesContainer.appendChild(imgElement);
+            });
+
+            galleryModal.classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('galleryModal').classList.add('hidden');
+        }
+
+        // Initially show the 'About Us' tab
+        document.addEventListener('DOMContentLoaded', () => {
+            showTab('about');
+        });
+    </script>
+</body>
+
+</html>
